@@ -104,22 +104,25 @@ public class QuizGenerator {
 
     public static Quiz createScienceQuiz() {
         Quiz scienceQuiz = new Quiz("Science");
+        scienceQuiz.addQuestion(new Question("How many bones are there in a human body", List.of("A. 206", "B. 220", "C. 106"), "A"));
         scienceQuiz.addQuestion(new Question("What is the chemical symbol for water?", List.of("A. H2O", "B. CO2", "C. NaCl"), "A"));
-        // Add more science questions...
+        scienceQuiz.addQuestion(new Question("What is the chemical symbol for sulphuric acid?", List.of("A. H2O", "B. H2SO4", "C. NH3"), "B"));
         return scienceQuiz;
     }
 
     public static Quiz createMathsQuiz() {
         Quiz mathsQuiz = new Quiz("Maths");
         mathsQuiz.addQuestion(new Question("What is the result of 2 + 2?", List.of("A. 3", "B. 4", "C. 5"), "B"));
-        // Add more maths questions...
+         mathsQuiz.addQuestion(new Question("What is the value of 2^3?", List.of("A. 6", "B. 8", "C. 10"), "B"));
+        mathsQuiz.addQuestion(new Question("What is the square root of 81?", List.of("A. 7", "B. 9", "C. 11"), "B"));
         return mathsQuiz;
     }
 
     public static Quiz createGeneralKnowledgeQuiz() {
         Quiz generalKnowledgeQuiz = new Quiz("General Knowledge");
-        generalKnowledgeQuiz.addQuestion(new Question("What is the capital of Australia?", List.of("A. Sydney", "B. Melbourne", "C. Canberra"), "C"));
-        // Add more general knowledge questions...
+        generalKnowledgeQuiz.addQuestion(new Question("Who wrote 'To Kill a Mockingbird'?", List.of("A. Harper Lee", "B. J.K. Rowling", "C. Charles Dickens"), "A"));
+        generalKnowledgeQuiz.addQuestion(new Question("In which year did the Titanic sink?", List.of("A. 1912", "B. 1921", "C. 1908"), "A"));
+        generalKnowledgeQuiz.addQuestion(new Question("What is the world's largest ocean?", List.of("A. Atlantic Ocean", "B. Indian Ocean", "C. Pacific Ocean"), "C"));
         return generalKnowledgeQuiz;
     }
 }
